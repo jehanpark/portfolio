@@ -19,11 +19,11 @@ body {
   width: 100%;
   margin: 0 auto;
   font-size: 1rem;
-  font-family: "Lexend", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 #innerWrapp {
-  width: 90%;
+  width: 88%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,15 +33,57 @@ body {
 body {
   width: 100%;
   height: 100%;
-  background: #e1e0dd;
+  background: #000000;
+  color: #fff;
+  font-family: "Figtree", sans-serif;
+}
+
+.lineContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 0px;
+}
+.lineContainer .infoTitle {
+  padding: 6px 20px;
+  color: #696d7f;
+  border: 1px solid #323232;
+  border-radius: 16px;
+}
+.lineContainer .line {
+  background: #323232;
+  flex: 1;
+  height: 1px;
+}
+
+.topNav {
+  display: none;
+  position: relative;
+  background: #0c0c0d;
+  width: 0%;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.topNav .trigger {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.topNav .trigger span {
+  color: #fff;
 }
 
 #Header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
-  background: #0c0c0d;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(146, 159, 173, 0.3), rgba(146, 159, 173, 0.1), rgba(255, 255, 255, 0));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,26 +91,54 @@ body {
 }
 #Header .headerContents {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 8px;
   display: flex;
   justify-content: space-between;
 }
-#Header .logo {
-  color: #fff;
+#Header .headerContents svg {
+  animation: rotate infinite 12s linear;
 }
 #Header .gnb {
   width: auto;
   color: #fff;
   display: flex;
+  align-items: center;
   gap: 100px;
   margin-right: 100px;
 }
 #Header .gnb div {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#Header.clickTrigger {
+  right: 0;
+}
+#Header.clickTrigger .headerContents {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#Header.clickTrigger .logo {
+  color: #fff;
+}
+#Header.clickTrigger .gnb {
+  width: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-right: 100px;
+}
+#Header.clickTrigger .gnb div {
   font-size: 12px;
   cursor: pointer;
 }
 
 #Intro {
+  animation: blur 2s ease;
   padding: 80px 0 40px 0;
   width: 100%;
   height: 100vh;
@@ -88,25 +158,24 @@ body {
 }
 #Intro .IntroMianTxt div {
   font-size: 8rem;
+  font-weight: 400;
 }
 
-#Infomation .infoTitle {
-  width: 120px;
-  height: 30px;
-  padding: 20px 0;
-  margin-bottom: 30px;
-  color: #000000;
-  border: 2px solid #0c0c0d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  opacity: 1;
-}
-#Infomation .line {
+#Video {
   width: 100%;
-  height: 2px;
-  background: #000;
+  height: auto;
+}
+#Video video {
+  width: 100%;
+  height: auto;
+  background: center/cover no-repeat;
+}
+
+#Infomation {
+  margin-bottom: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #Infomation .infoContentsWrapp {
   width: 100%;
@@ -117,19 +186,20 @@ body {
   cursor: pointer;
 }
 #Infomation .infoContentsWrapp .infoContents {
-  border: 1px solid #f00;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 0.5s;
 }
 #Infomation .infoContentsWrapp .infoContents .proIgm {
   width: 100%;
+  height: auto;
 }
 #Infomation .infoContentsWrapp .infoContents .proIgm img {
   width: 100%;
-  height: 600px;
+  height: 460px;
   background: center/no-repeat;
 }
 #Infomation .infoContentsWrapp .infoContents .proDesc {
@@ -138,32 +208,42 @@ body {
 #Infomation .infoContentsWrapp .infoContents .proDesc .proName {
   font-size: 1.8rem;
 }
+#Infomation .infoContentsWrapp .infoContents .proDesc .proName::before {
+  content: "";
+  display: inline-block;
+  transition: all 0.5s;
+}
+#Infomation .infoContentsWrapp .infoContents .proDesc .proName:hover::before {
+  border-bottom: 1px solid #696d7f;
+}
 #Infomation .infoContentsWrapp .infoContents .proDesc .proDate {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+#Infomation .infoContentsWrapp .infoContents:hover {
+  transform: translateY(-10px);
+}
+
+#AllprofileComent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#AllprofileComent .profileComent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 #Profile {
   width: 100%;
-  margin-top: 50px;
-}
-#Profile .profileTitle {
-  width: 100%;
-  height: 100px;
-  padding: 60px 0;
-  border: 1px solid #f00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-}
-#Profile .profileComent {
-  width: 100%;
-  border: 1px solid #f00;
-  padding: 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
+  height: auto;
 }
 #Profile .profileContents {
   display: flex;
@@ -171,14 +251,25 @@ body {
 #Profile .profileContents .profileDesc {
   flex: 2;
   height: 500px;
-  border: 1px solid #f00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
 }
 #Profile .profileContents .profileDesc .myinfo {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-#Profile .profileContents .profileDesc .tool {
-  font-size: 1.2rem;
-  padding: 30px;
+#Profile .profileContents .profileDesc .myinfo .descWrapp {
+  display: flex;
+}
+#Profile .profileContents .profileDesc .myinfo .descWrapp .myinfoDesc {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 #Profile .profileContents .profileDesc .tools {
   display: flex;
@@ -188,14 +279,23 @@ body {
 }
 #Profile .profileContents .profileDesc .tools ul {
   display: flex;
-  border-bottom: 1px solid #f00;
-  gap: 18px;
+}
+#Profile .profileContents .profileDesc .tools ul li {
+  width: auto;
+  padding-right: 20px;
 }
 #Profile .profileContents .profileDesc .tools .toolltitle {
+  width: 360px;
   font-weight: bold;
+}
+#Profile .profileContents .profileDesc .myGray {
+  color: #7d7d7d;
 }
 #Profile .profileContents .profileImg {
   flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 #Profile .profileContents .profileImg img {
   width: 100%;
@@ -217,11 +317,18 @@ body {
   padding: 160px 0;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 220px;
+}
+#Footer .svgBox svg {
+  animation: rotate infinite 16s linear;
 }
 #Footer .App {
   display: flex;
   gap: 60px;
+}
+#Footer .App img {
+  width: 60px;
+  height: 60px;
 }
 #Footer .App span {
   width: 35px;
@@ -251,22 +358,38 @@ body {
   font-size: 0.8rem;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blur {
+  0% {
+    filter: blur(12px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
 @media screen and (max-width: 768px) {
   .topNav {
     position: relative;
-    background: #0c0c0d;
+    right: 0;
+    top: 0;
     width: 100%;
     height: 60px;
     display: flex;
-    align-items: center;
   }
   .topNav .trigger {
-    border: 1px solid #f00;
+    margin-right: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-    transition: all 0.4s;
+  }
+  .topNav .trigger span {
+    color: #fff;
   }
   #Header {
     position: fixed;
@@ -274,26 +397,26 @@ body {
     right: -180px; /* 처음에 화면 밖에 위치 */
     width: 180px;
     height: 100%;
-    background-color: #333; /* 어두운 배경색 */
+    background-color: #0d0d0d; /* 어두운 배경색 */
     display: flex;
     align-items: center;
-    justify-content: center;
     transition: right 0.4s ease-in-out; /* right 속성을 조정하여 나타나도록 */
   }
   #Header.clickTrigger {
-    right: 0; /* 트리거 클릭 시 사이드바가 화면 안으로 슬라이드 */
+    right: 0;
+    top: 0;
   }
-  .headerContents {
+  #Header.clickTrigger .headerContents {
     width: 100%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .logo {
+  #Header.clickTrigger .logo {
     color: #fff;
   }
-  .gnb {
+  #Header.clickTrigger .gnb {
     width: auto;
     color: #fff;
     display: flex;
@@ -301,7 +424,7 @@ body {
     gap: 80px;
     margin-right: 100px;
   }
-  .gnb div {
+  #Header.clickTrigger .gnb div {
     font-size: 12px;
     cursor: pointer;
   }

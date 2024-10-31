@@ -7,7 +7,7 @@
   </head>
   <!-- gf -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet"
   />
   <!-- gf icons -->
@@ -27,18 +27,36 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="index.js"></script>
   <body>
-    <div class="topNav">
-      <div class="trigger">
-        <span class="material-symbols-outlined">sort</span>
-      </div>
-    </div>
     <section id="Header">
+      <div class="topNav">
+        <div class="trigger">
+          <span class="material-symbols-outlined">sort</span>
+        </div>
+      </div>
       <div class="headerContents">
-        <div class="logo">edfdf</div>
+        <svg width="80" height="80" viewBox="0 0 300 300">
+          <defs>
+            <path
+              id="circlePath"
+              d="M 150, 150 m -100, 0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"
+            />
+          </defs>
+
+          <text
+            font-size="20"
+            fill="#fff"
+            font-family="Arial"
+            font-weight="bold"
+          >
+            <textPath href="#circlePath">
+              UXUI DESIGN WEB APP REACTIVE PAGE PORTFOLIO 2024-2025
+            </textPath>
+          </text>
+        </svg>
         <div class="gnb">
-          <div>div1</div>
-          <div>div2</div>
-          <div>div3</div>
+          <div>Zero100</div>
+          <div>Amazon Kr</div>
+          <div>Threads</div>
         </div>
       </div>
     </section>
@@ -47,7 +65,9 @@
         <section id="Intro">
           <div class="IntroSubText">
             <div class="IntroSubTextWrapp">
-              <div>Designer&Wep Publisher</div>
+              <div>Designer</div>
+              <div>&</div>
+              <div>Wep Publisher</div>
             </div>
             <div class="IntroSubTextWrapp">
               <div>UX</div>
@@ -66,19 +86,32 @@
           <div class="IntroMianTxt">
             <div>UXUI</div>
             <div>Reactive Page</div>
-            <div>Portfolio.</div>
+            <div>Portfolio .</div>
           </div>
         </section>
+        <section id="Video">
+          <video
+            src="./img/video0.mp4"
+            autoplay
+            loop
+            muted
+            preload="auto"
+          ></video>
+        </section>
         <section id="Infomation">
-          <div class="infoTitle">Project</div>
+          <div class="lineContainer">
+            <div class="line"></div>
+            <div class="infoTitle">Project</div>
+            <div class="line"></div>
+          </div>
           <div class="infoContentsWrapp">
             <div class="infoContents">
-              <div class="proIgm">
-                <img src="./img/giraffes-901009_1280.jpg" alt="ex" />
-              </div>
+              <a class="proIgm" href="./zero100.html">
+                <img src="./img/infoImg1.png" alt="ex" />
+              </a>
               <div class="proDesc">
-                <div class="proName">100</div>
-                <div class="proDate">2024</div>
+                <div class="proName">ZERO100</div>
+                <div class="proDate">EV Charging Service Design</div>
               </div>
             </div>
             <div class="infoContents">
@@ -86,8 +119,8 @@
                 <img src="./img/다운로드.jpg" alt="ex" />
               </div>
               <div class="proDesc">
-                <div class="proName">100</div>
-                <div class="proDate">2024</div>
+                <div class="proName">Amazon kr</div>
+                <div class="proDate">Amazon Site Redesign Web/App</div>
               </div>
             </div>
             <div class="infoContents">
@@ -95,39 +128,67 @@
                 <img src="./img/1.jpg" alt="ex" />
               </div>
               <div class="proDesc">
-                <div class="proName">100</div>
-                <div class="proDate">2024</div>
+                <div class="proName">Threads</div>
+                <div class="proDate">Threads Site Redesign Web/App</div>
               </div>
             </div>
           </div>
         </section>
+        <section id="AllprofileComent">
+          <div class="profileComent">
+            사용자 중심의 아이디어를 제시하고 개발 환경을
+          </div>
+          <div class="profileComent">
+            고려하여 개발가능한 서비스를 디자인합니다
+          </div>
+        </section>
         <section id="Profile">
-          <div class="profileTitle">Profile</div>
-          <div class="profileComent">안녕하세요~안녕하세요~안녕하세요~</div>
+          <div class="lineContainer">
+            <div class="line"></div>
+            <div class="infoTitle">Profile</div>
+            <div class="line"></div>
+          </div>
           <div class="profileContents">
             <div class="profileDesc">
               <div class="myinfo">
-                <div class="myName">박제한 Park je Han</div>
-                <div class="myschool">saffkfj</div>
+                <div class="descWrapp">
+                  <div class="myinfoDesc">
+                    <div class="myGray">Name</div>
+                    <div class="myName">박제한</div>
+                  </div>
+                  <div class="myinfoDesc">
+                    <div class="myGray">E-mail</div>
+                    <div class="myEmail">5071pjh@naver.com</div>
+                  </div>
+                </div>
+                <div class="descWrapp">
+                  <div class="myinfoDesc">
+                    <div class="myGray">Phone</div>
+                    <div class="myPhone">010 4942 9641</div>
+                  </div>
+                </div>
               </div>
-              <div class="tool">Tool</div>
               <div class="tools">
+                <div class="myGray">Tool</div>
                 <ul>
-                  <li class="toolltitle">333</li>
-                  <li>333</li>
-                  <li>333</li>
-                  <li>333</li>
-                  <li>333</li>
+                  <li class="toolltitle">Graphic Skills</li>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>Figma</li>
+                  <li>Xd</li>
+                  <li>Zeplin</li>
                 </ul>
                 <ul>
-                  <li class="toolltitle">333</li>
-                  <li>333</li>
-                  <li>333</li>
-                  <li>333</li>
+                  <li class="toolltitle">Publishing Skills</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>SCSS</li>
+                  <li>Git</li>
                 </ul>
                 <ul>
-                  <li class="toolltitle">333</li>
-                  <li>333</li>
+                  <li class="toolltitle">3D Modeling Skills</li>
+                  <li>Rhino</li>
+                  <li>KeyShot</li>
                 </ul>
               </div>
             </div>
@@ -139,9 +200,9 @@
         <section id="Footer">
           <div class="svgBox">
             <div class="App">
-              <div>GitHub</div>
-              <div>instargram Kr</div>
-              <div>Blog</div>
+              <img src="./img/logo1.png" alt="logo1" />
+              <img src="./img/logo1.png" alt="logo1" />
+              <img src="./img/logo1.png" alt="logo1" />
             </div>
             <svg width="180" height="180" viewBox="0 0 300 300">
               <defs>
@@ -153,7 +214,7 @@
 
               <text
                 font-size="20"
-                fill="dark"
+                fill="#c1c1c1"
                 font-family="Arial"
                 font-weight="bold"
               >
@@ -175,7 +236,7 @@
               <div>instargram</div>
             </div>
             <div class="footerkeyword">
-              <div>instargram Kr</div>
+              <div>instargram</div>
             </div>
           </div>
         </section>

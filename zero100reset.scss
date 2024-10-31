@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-family: "Figtree", sans-serif;
+}
+
+#innerWrapp {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+$color: (
+  darkColor: #0c0c0d,
+  mainBgColor: #e1e0dd,
+  keyColor: #696d7f,
+);

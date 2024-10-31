@@ -1,0 +1,308 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 200;
+  background: rgb(0, 0, 0);
+}
+
+.sectionTitle {
+  font-weight: normal;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.koTxt {
+  color: #ccc;
+}
+
+.elTxt {
+  color: #838383;
+}
+
+#innerWrapp {
+  width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #050505;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro {
+  width: 100%;
+  height: 100vh;
+}
+#intro .introSymbol {
+  width: 50px;
+  height: 50px;
+}
+
+#bg {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#bg img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bg .bgtxt {
+  padding: 180px 0;
+  text-align: center;
+  line-height: 1.8rem;
+  color: #ccc;
+  opacity: 1;
+  transition: all 0.3s;
+  transform: translateY(20px);
+}
+
+#problem {
+  display: flex;
+  flex-direction: column;
+}
+#problem .problemBoxAll {
+  display: flex;
+  gap: 20px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 50px;
+}
+#problem .problemBoxAll .problemBox {
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px;
+  height: 180px;
+  background: #181817;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+#problem .problemBoxAll .problemBox:hover {
+  color: #ccc;
+  height: 380px;
+  opacity: 1;
+}
+#problem .problemBoxAll .problemBox:hover ul {
+  width: 100%;
+  height: 300px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#problem .problemBoxAll .problemBox:hover ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+}
+#problem .problemBoxAll .problemBox:hover ul li img {
+  width: 10px;
+  height: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#problem .problemBoxAll .problemBox:hover .problemBigTextdesc {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+#problem .problemBoxAll .problemBox:hover .problemBigTextdesc .sub {
+  font-size: 0.8rem;
+  padding: 10px;
+  color: #ccc;
+}
+#problem .problemBoxAll .problemBox:hover .problemBigTextdesc .main {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #fafafa;
+}
+#problem .problemBoxAll .problemBox:hover .problemBigTextdesc .mainlast {
+  font-size: 2rem;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #ccc;
+}
+#problem .problemBoxAll .problemBox ul {
+  width: 100%;
+  height: 300px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#problem .problemBoxAll .problemBox ul li {
+  display: none;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+}
+#problem .problemBoxAll .problemBox ul li img {
+  width: 10px;
+  height: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#problem .problemBoxAll .problemBox .problemBigTextdesc {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-bottom: 20px;
+}
+#problem .problemBoxAll .problemBox .problemBigTextdesc .sub {
+  font-size: 0.8rem;
+  padding: 10px;
+  color: #303030;
+}
+#problem .problemBoxAll .problemBox .problemBigTextdesc .main {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #303030;
+}
+#problem .problemBoxAll .problemBox .problemBigTextdesc .mainlast {
+  font-size: 1.6rem;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #303030;
+}
+
+#swot {
+  display: flex;
+  flex-direction: column;
+}
+#swot .swotsubTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#swot .swotBoxAll {
+  cursor: pointer;
+  display: grid;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-top: 50px;
+  position: relative;
+}
+#swot .swotBoxAll .onImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50px);
+  z-index: 10;
+}
+#swot .swotBoxAll .swotTable {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 20px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+#swot .swotBoxAll .swotTable:hover {
+  height: 600px;
+  opacity: 1;
+}
+#swot .swotBoxAll .swotTable .tableBox {
+  width: 300px;
+  height: 180px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  background: #181817;
+  color: #838383;
+  padding: 14px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#swot .swotBoxAll .swotTable .tableBox .swotImg {
+  width: auto;
+  height: auto;
+  flex-wrap: nowrap;
+}
+#swot .swotBoxAll .swotTable .tableBox .tableBoxTetWrapp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0 0 0;
+}
+#swot .swotBoxAll .swotTable .tableBox .tableBoxTetWrapp .tableBoxTet {
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: center;
+  color: #ccc;
+}
+
+#userinterview {
+  padding-top: 60px;
+}
+#userinterview .interviewBoxWarrp {
+  display: flex;
+  gap: 20px;
+}
+#userinterview .interviewBoxWarrp .interviewBox {
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px;
+  height: 180px;
+  background: #181817;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
