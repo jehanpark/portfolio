@@ -427,6 +427,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 100px;
 }
 #style .SymbolWrapp {
   padding: 60px 0;
@@ -460,7 +461,7 @@ body {
 }
 #style .colorWrapp .colorY {
   cursor: pointer;
-  width: 20%;
+  width: 10%;
   height: 80px;
   padding: 20px;
   overflow: hidden;
@@ -479,10 +480,10 @@ body {
 }
 #style .colorWrapp .colorN {
   cursor: pointer;
-  width: 20%;
+  width: 10%;
   background: #11122a;
   height: 80px;
-  padding: 10px;
+  padding: 20px;
   overflow: hidden;
   border-radius: 50px;
   color: #11122a;
@@ -509,11 +510,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100px;
+  transition: all 0.5s;
 }
 #style .AllFontWrapp .fontDesc .smallFont {
   display: flex;
   font-size: 0.7rem;
   padding: 30px 0;
+  color: #c9fc5a;
 }
 #style .AllFontWrapp .fontDesc .FontLight {
   display: flex;
@@ -539,4 +543,236 @@ body {
   display: flex;
   font-size: 2rem;
   font-weight: 900;
+}
+
+#billboard {
+  width: 100%;
+  padding: 60px 0;
+}
+#billboard img {
+  width: 100%;
+}
+
+#wf {
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden;
+}
+#wf .wfwrapp {
+  position: relative;
+}
+#wf .wfwrapp .wfSlide {
+  display: flex;
+  gap: 20px;
+  animation: wfSlide 26s linear infinite;
+}
+#wf .wfwrapp .wfSlide img {
+  transition: all 0.5s;
+}
+#wf .wfwrapp .wfSlide img:hover {
+  transform: translateY(-10px);
+}
+
+#mobile {
+  width: 100%;
+  padding: 60px 0;
+}
+#mobile .loginOnbording {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+#mobile .loginOnbording .imgWrapp {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mobile .mainPay {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 0;
+}
+#mobile .mainPay .mainImg {
+  flex: 2;
+  width: 340px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  justify-content: center;
+  scale: 1.5;
+  z-index: 10;
+}
+#mobile .mainPay .mainImg img {
+  width: 100%;
+}
+#mobile .mainPay .lefttImg {
+  flex: 1;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mobile .mainPay .rightImg {
+  flex: 1;
+  transition: all 0.5s;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: center/cover;
+}
+#mobile .mainPay .rightImg img {
+  width: auto;
+  height: auto;
+}
+#mobile .pay {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#mobile .pay .payImg {
+  display: flex;
+}
+#mobile .pay .payImg .imgWrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(60px);
+}
+#mobile .pay .payImg .imgWrapp .img {
+  z-index: 2;
+}
+#mobile .pay .payImg .imgWrapp .info {
+  transform: translateX(-50px);
+}
+#mobile .map {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#mobile .map .mapImg {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+#mobile .map .mapImg .imgWrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(60px);
+}
+#mobile .map .mapImg .imgWrapp .img {
+  z-index: 2;
+}
+#mobile .map .mapImg .imgWrapp .info {
+  transform: translateX(-50px);
+}
+#mobile .charging {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+#mobile .charging .chargingImg {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+#mobile .charging .chargingImg .imgWrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(60px);
+}
+#mobile .charging .chargingImg .imgWrapp .img {
+  z-index: 2;
+}
+#mobile .charging .chargingImg .imgWrapp .info {
+  transform: translateX(-50px);
+}
+#mobile .charging .chargflowWarpp {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100px);
+}
+#mobile .charging .chargflowWarpp .flow {
+  width: 517px;
+  height: auto;
+}
+#mobile .charging .chargflowWarpp img {
+  width: auto;
+  height: auto;
+  background: contain;
+}
+#mobile .charging .show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#mobile .home {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mobile .home .imgWrapp {
+  display: flex;
+}
+#mobile .home .imgWrapp .img {
+  z-index: 2;
+}
+#mobile .home .imgWrapp .info {
+  transform: translateX(-50px);
+}
+#mobile .home .homeImg {
+  width: 100%;
+  height: auto;
+  transform: translateY(-140px);
+}
+#mobile .lefttImg,
+#mobile .rightImg,
+#mobile .info,
+#mobile .flow,
+#mobile .homeImg {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s;
+}
+#mobile .show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home {
+  transform: translateY(-200px);
+}
+#home .homeImg {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes wfSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
