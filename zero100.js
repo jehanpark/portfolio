@@ -31,3 +31,22 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach((element) => observer.observe(element));
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slideWrapper = document.querySelector(".slideWarpp");
+  const boxes = slideWrapper.querySelectorAll(".enswerBox, .enswerBoxY");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          // 요소가 뷰포트에서 벗어나면 마지막 위치로 이동
+          slideWrapper.appendChild(entry.target);
+        }
+      });
+    },
+    { root: slideWrapper, threshold: 0 }
+  );
+
+  boxes.forEach((box) => observer.observe(box));
+});
