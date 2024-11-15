@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-family: "SUIT", sans-serif;
+  background: rgb(57, 57, 57);
+}
+
+#innerWrapp {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+}

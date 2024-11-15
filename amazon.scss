@@ -1,0 +1,298 @@
+@import url(./amazonreset.css);
+
+$color: (
+  darkColor: #0c0c0d,
+  mainBgColor: #e1e0dd,
+  keyColor: #f79b33,
+  primeColor: #00a8e1,
+  borderColor: #171717,
+);
+
+#intro {
+  width: 100%;
+  background: #f00;
+}
+#bg {
+  padding: 60px 0;
+  .bgTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 30px;
+  }
+  .bgtext {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+#process {
+  padding-top: 60px;
+  padding: 0 40px;
+  .processTitle {
+    font-size: 1.8rem;
+  }
+  .processBoxWarrp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 0;
+    .processBox {
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      width: 212px;
+      background: #171717;
+      color: #fff;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      .boxTitle {
+        font-size: 1rem;
+        padding: 12px;
+      }
+      .boxImg {
+        width: 100%;
+        height: 150px;
+      }
+      .boxText {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.7rem;
+        padding: 12px;
+      }
+    }
+  }
+}
+#search {
+  padding: 60px 40px 0;
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .mainTitle {
+      font-size: 1.8rem;
+    }
+  }
+  .searchBoxWarrp {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    width: 100%;
+    .searchBox {
+      width: 297px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border-radius: 12px;
+      background: #171717;
+      padding: 24px 18px;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      .searchBoxTitle {
+        font-size: 1rem;
+        color: #ccc;
+      }
+      .searchBoxImg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+#searchTwo {
+  padding: 60px 40px 0;
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .mainTitle {
+      font-size: 1.8rem;
+    }
+  }
+  .searchBoxWarrp {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    width: 100%;
+    gap: 20px;
+    .searchBox {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border-radius: 12px;
+      background: #171717;
+      padding: 24px 18px;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      .searchBoxTitle {
+        font-size: 1rem;
+        color: #ccc;
+      }
+      .searchBoxImg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+#tobe {
+  padding: 60px 40px 0;
+  background: #171717;
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .mainTitle {
+      font-size: 2.6rem;
+      color: map-get($color, keyColor);
+    }
+  }
+  .tobeAllwrapp {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    .tobetextArea {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .tobeTItle {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+      .tobedesc {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 80px;
+        .tobeContent {
+          display: flex;
+          gap: 12px;
+          .tobetext {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  .tobeImgArea {
+    width: 60%;
+    border: 1px solid blue;
+  }
+}
+#prime {
+  padding: 60px 40px 0;
+  background: #000;
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .mainTitle {
+      font-size: 2.6rem;
+      color: map-get($color, primeColor);
+    }
+  }
+  .tobeAllwrapp {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    .tobetextArea {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .tobeTItle {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+      .tobedesc {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 80px;
+        .tobeContent {
+          display: flex;
+          gap: 12px;
+          .tobetext {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  .tobeImgArea {
+    width: 60%;
+    border: 1px solid blue;
+  }
+}
+#appFlow {
+  padding: 60px 40px 0;
+  background: #000;
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  .appFlowImg {
+    padding: 60px 0;
+  }
+}
+#wf {
+  padding: 60px 40px 0;
+  background: map-get($color, borderColor);
+  .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .miniTitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  .wfImgArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
