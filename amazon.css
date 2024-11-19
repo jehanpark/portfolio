@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(./amazonreset.css);
 #txtwrapp {
   display: flex;
@@ -14,34 +15,91 @@
 }
 
 #intro {
-  width: 100%;
-  background: #f00;
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 100px 0 0;
+  height: 76vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  position: relative;
+  /* 비디오 스타일 */
+  /* 어두운 필터 */
+}
+#intro .logo {
+  position: absolute;
+  width: auto;
   height: auto;
-  padding: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 30;
+  filter: invert(0);
+}
+#intro .logo img {
+  width: 300px;
+  height: auto;
+}
+#intro .video-wrapper {
+  position: relative;
+  width: 100%; /* 원하는 너비 설정 */
+  max-width: 800px; /* 최대 너비 설정 (필요시) */
+  height: auto; /* 높이는 비디오에 맞춤 */
+  overflow: hidden;
+}
+#intro .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+#intro .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 투명도 조정 (0.4는 40% 어두움) */
+  pointer-events: none; /* 필터가 클릭을 막지 않도록 설정 */
 }
 
 #bg {
-  padding: 60px 0;
+  padding: 250px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
 }
 #bg .bgTitle {
   width: 100%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 600;
-  padding: 30px;
+  color: #fff;
+}
+#bg .aktxt {
+  display: flex;
+  color: #fff;
+  font-size: 1.4rem;
+}
+#bg .aktxt .yellow {
+  color: #f79b33;
+  font-weight: bold;
+}
+#bg img {
+  padding: 20px;
 }
 #bg .bgtext {
   width: 100%;
   text-align: center;
   font-size: 16px;
+  color: #ccc;
 }
 
 #process {
   padding-top: 60px;
-  padding: 0 40px;
+  padding: 60px 40px;
 }
 #process .processTitle {
   font-size: 1.8rem;
@@ -82,7 +140,7 @@
 }
 
 #search {
-  padding: 60px 40px 0;
+  padding: 60px 40px;
 }
 #search .titleWrapp {
   display: flex;
@@ -127,7 +185,7 @@
 }
 
 #searchTwo {
-  padding: 60px 40px 0;
+  padding: 60px 40px;
 }
 #searchTwo .titleWrapp {
   display: flex;
@@ -173,7 +231,7 @@
 }
 
 #tobe {
-  padding: 60px 40px 0;
+  padding: 60px 40px;
   background: #171717;
 }
 #tobe .titleWrapp {
@@ -224,7 +282,7 @@
 }
 
 #prime {
-  padding: 60px 40px 0;
+  padding: 60px 40px;
   background: #000;
 }
 #prime .titleWrapp {
@@ -275,7 +333,7 @@
 }
 
 #appFlow {
-  padding: 60px 40px 0;
+  padding: 60px 40px;
   background: #000;
 }
 #appFlow .titleWrapp {
