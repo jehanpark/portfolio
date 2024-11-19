@@ -7,6 +7,40 @@ $color: (
   primeColor: #00a8e1,
   borderColor: #171717,
 );
+#backBtn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: #181817;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  span {
+    scale: 1.1;
+    color: #ccc;
+    transform: translateX(0px);
+    transition: all 0.3s;
+  }
+  &:hover {
+    background: map-get($color, keyColor);
+    span {
+      color: #303030;
+      transform: translateX(-8px);
+    }
+  }
+}
+#innerWrapp {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+}
 #txtwrapp {
   display: flex;
   flex-direction: column;
@@ -233,7 +267,7 @@ $color: (
 }
 #tobe {
   padding: 60px 40px;
-  background: #171717;
+  background: #000;
   .titleWrapp {
     display: flex;
     flex-direction: column;
@@ -251,6 +285,7 @@ $color: (
   .tobeAllwrapp {
     width: 100%;
     display: flex;
+    align-items: center;
     padding: 50px 0;
     .tobetextArea {
       width: 40%;
@@ -278,7 +313,12 @@ $color: (
   }
   .tobeImgArea {
     width: 60%;
-    border: 1px solid blue;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 }
 #prime {
@@ -301,6 +341,7 @@ $color: (
   .tobeAllwrapp {
     width: 100%;
     display: flex;
+    align-items: center;
     padding: 50px 0;
     .tobetextArea {
       width: 40%;
@@ -328,7 +369,12 @@ $color: (
   }
   .tobeImgArea {
     width: 60%;
-    border: 1px solid blue;
+    height: auto;
+    object-fit: contain;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 #appFlow {
@@ -684,6 +730,591 @@ $color: (
     .fade-inL {
       opacity: 1;
       transform: translateY(0px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #backBtn {
+    display: none;
+  }
+  #txtwrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .ko {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .el {
+      font-size: 0.8rem;
+      color: #bdbdbd;
+      font-weight: bold;
+    }
+  }
+  #innerWrapp {
+    width: 100%;
+    display: flex;
+    background: #fff;
+  }
+  #intro {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    height: 50vh;
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    .logo {
+      position: absolute;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: 30;
+      filter: invert(0);
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%; /* 원하는 너비 설정 */
+      max-width: 800px; /* 최대 너비 설정 (필요시) */
+      height: auto; /* 높이는 비디오에 맞춤 */
+      overflow: hidden;
+    }
+
+    /* 비디오 스타일 */
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+
+    /* 어두운 필터 */
+    .filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* 투명도 조정 (0.4는 40% 어두움) */
+      pointer-events: none; /* 필터가 클릭을 막지 않도록 설정 */
+    }
+  }
+  #bg {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    .bgTitle {
+      width: 100%;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .aktxt {
+      display: flex;
+      color: #fff;
+      font-size: 1.4rem;
+      .yellow {
+        color: map-get($color, keyColor);
+        font-weight: bold;
+      }
+    }
+    img {
+      padding: 20px;
+    }
+    .bgtext {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+  }
+  #process {
+    padding-top: 60px;
+    padding: 60px 20px;
+    .processTitle {
+      font-size: 1.4rem;
+    }
+    .processBoxWarrp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      padding: 50px 0;
+      gap: 20px;
+      .processBox {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        width: 212px;
+        background: #171717;
+        color: #fff;
+        transition: all 0.5s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+        .boxTitle {
+          font-size: 1rem;
+          padding: 12px;
+        }
+        .boxImg {
+          width: 100%;
+          height: 150px;
+        }
+        .boxText {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          font-size: 0.7rem;
+          padding: 12px;
+        }
+      }
+    }
+  }
+  #search {
+    padding: 60px 20px;
+    .titleWrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .miniTitle {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      .mainTitle {
+        font-size: 1.4rem;
+      }
+    }
+    .searchBoxWarrp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+      width: 100%;
+      gap: 20px;
+      .searchBox {
+        width: 297px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-radius: 12px;
+        background: #171717;
+        padding: 24px 18px;
+        transition: all 0.5s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+        .searchBoxTitle {
+          font-size: 1rem;
+          color: #ccc;
+        }
+        .searchBoxImg {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  #searchTwo {
+    padding: 60px 20px;
+    .titleWrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .miniTitle {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      .mainTitle {
+        font-size: 1.4rem;
+      }
+    }
+    .searchBoxWarrp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+      width: 100%;
+      gap: 20px;
+      .searchBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-radius: 12px;
+        background: #171717;
+        padding: 24px 18px;
+        transition: all 0.5s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+        .searchBoxTitle {
+          font-size: 1rem;
+          color: #ccc;
+        }
+        .searchBoxImg {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  #tobe {
+    padding: 60px 20px;
+    background: #000;
+    .titleWrapp {
+      display: flex;
+      gap: 12px;
+      .miniTitle {
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      .mainTitle {
+        width: 100%;
+        font-size: 2.6rem;
+        color: map-get($color, keyColor);
+      }
+    }
+    .tobeAllwrapp {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 50px 0;
+      .tobetextArea {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .tobeTItle {
+          font-size: 1.1rem;
+          color: #fff;
+          width: 100%;
+        }
+        .tobedesc {
+          display: flex;
+          padding-top: 50px;
+          gap: 60px;
+          .tobeContent {
+            display: flex;
+            gap: 12px;
+            .tobetext {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+    .tobeImgArea {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  #prime {
+    padding: 60px 20px;
+    background: #000;
+    .titleWrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .miniTitle {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      .mainTitle {
+        font-size: 2.6rem;
+        color: map-get($color, primeColor);
+      }
+    }
+    .tobeAllwrapp {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 50px 0;
+      .tobetextArea {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .tobeTItle {
+          font-size: 1.1rem;
+          color: #fff;
+        }
+        .tobedesc {
+          display: flex;
+          flex-direction: column;
+          padding-top: 50px;
+          gap: 60px;
+          .tobeContent {
+            display: flex;
+            gap: 12px;
+            .tobetext {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+    .tobeImgArea {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      padding-top: 40px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  #appFlow {
+    padding: 60px 20px;
+    background: #000;
+    .titleWrapp {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .miniTitle {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    .appFlowImg {
+      width: 100%;
+      padding: 60px 0;
+      object-fit: cover;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #wf {
+    padding: 60px 20px;
+    background: map-get($color, borderColor);
+    .titleWrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .miniTitle {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    .wfImgArea {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      object-fit: cover;
+      div {
+        width: 100%;
+        color: #666;
+        padding: 20px 0;
+        font-weight: bold;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #mobile {
+    width: 100%;
+    padding: 60px 0;
+    background: #f1f1f1;
+    .MHeader {
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 600;
+      padding: 50px 40px;
+    }
+    .loginWrapp {
+      width: 100%;
+      height: auto;
+      display: flex;
+      .leftArea {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 20px;
+      }
+      .leftDetail {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s;
+      }
+      .rightArea {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-right: 20px;
+      }
+      .rightCart {
+        display: flex;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.5s;
+        padding-left: 40px;
+      }
+      .fade-in {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .fade-inL {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .MmainWrapp {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      padding: 100px 0;
+      .rightArea {
+        width: 100%;
+        display: flex;
+      }
+      .fade-in {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .fade-inL {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .MdetailWrapp {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      padding: 100px 0;
+      .rightArea {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fade-in {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .fade-inL {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .cartWrapp {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 100px 0;
+      .leftArea {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+      }
+      .rightArea {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 12%;
+      }
+      .leftMcart {
+        display: flex;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.5s;
+        padding-left: 40px;
+      }
+      .fade-in {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .fade-inL {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .primeWrapp {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 100px 0;
+      .leftArea {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 12%;
+      }
+      .leftDetail {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s;
+      }
+      .rightArea {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+      }
+      .rightprime {
+        display: flex;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.5s;
+        padding-left: 40px;
+      }
+      .fade-in {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      .fade-inL {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    img {
+      width: 100%;
     }
   }
 }

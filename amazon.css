@@ -1,5 +1,41 @@
 @charset "UTF-8";
 @import url(./amazonreset.css);
+#backBtn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: #181817;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+#backBtn span {
+  scale: 1.1;
+  color: #ccc;
+  transform: translateX(0px);
+  transition: all 0.3s;
+}
+#backBtn:hover {
+  background: #f79b33;
+}
+#backBtn:hover span {
+  color: #303030;
+  transform: translateX(-8px);
+}
+
+#innerWrapp {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+}
+
 #txtwrapp {
   display: flex;
   flex-direction: column;
@@ -232,7 +268,7 @@
 
 #tobe {
   padding: 60px 40px;
-  background: #171717;
+  background: #000;
 }
 #tobe .titleWrapp {
   display: flex;
@@ -251,6 +287,7 @@
 #tobe .tobeAllwrapp {
   width: 100%;
   display: flex;
+  align-items: center;
   padding: 50px 0;
 }
 #tobe .tobeAllwrapp .tobetextArea {
@@ -278,7 +315,13 @@
 }
 #tobe .tobeImgArea {
   width: 60%;
-  border: 1px solid blue;
+  height: auto;
+}
+#tobe .tobeImgArea img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #prime {
@@ -302,6 +345,7 @@
 #prime .tobeAllwrapp {
   width: 100%;
   display: flex;
+  align-items: center;
   padding: 50px 0;
 }
 #prime .tobeAllwrapp .tobetextArea {
@@ -329,7 +373,13 @@
 }
 #prime .tobeImgArea {
   width: 60%;
-  border: 1px solid blue;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#prime .tobeImgArea img {
+  width: 100%;
+  height: auto;
 }
 
 #appFlow {
@@ -690,4 +740,593 @@
 #mobile .primeWrapp .fade-inL {
   opacity: 1;
   transform: translateY(0px);
+}
+
+@media screen and (max-width: 768px) {
+  #backBtn {
+    display: none;
+  }
+  #txtwrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  #txtwrapp .ko {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  #txtwrapp .el {
+    font-size: 0.8rem;
+    color: #bdbdbd;
+    font-weight: bold;
+  }
+  #innerWrapp {
+    width: 100%;
+    display: flex;
+    background: #fff;
+  }
+  #intro {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    height: 50vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    /* 비디오 스타일 */
+    /* 어두운 필터 */
+  }
+  #intro .logo {
+    position: absolute;
+    width: auto;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 30;
+    filter: invert(0);
+  }
+  #intro .logo img {
+    width: 200px;
+    height: auto;
+  }
+  #intro .video-wrapper {
+    position: relative;
+    width: 100%; /* 원하는 너비 설정 */
+    max-width: 800px; /* 최대 너비 설정 (필요시) */
+    height: auto; /* 높이는 비디오에 맞춤 */
+    overflow: hidden;
+  }
+  #intro .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+  #intro .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 투명도 조정 (0.4는 40% 어두움) */
+    pointer-events: none; /* 필터가 클릭을 막지 않도록 설정 */
+  }
+  #bg {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+  }
+  #bg .bgTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  #bg .aktxt {
+    display: flex;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  #bg .aktxt .yellow {
+    color: #f79b33;
+    font-weight: bold;
+  }
+  #bg img {
+    padding: 20px;
+  }
+  #bg .bgtext {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  #process {
+    padding-top: 60px;
+    padding: 60px 20px;
+  }
+  #process .processTitle {
+    font-size: 1.4rem;
+  }
+  #process .processBoxWarrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 0;
+    gap: 20px;
+  }
+  #process .processBoxWarrp .processBox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 212px;
+    background: #171717;
+    color: #fff;
+    transition: all 0.5s;
+  }
+  #process .processBoxWarrp .processBox:hover {
+    transform: translateY(-10px);
+  }
+  #process .processBoxWarrp .processBox .boxTitle {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  #process .processBoxWarrp .processBox .boxImg {
+    width: 100%;
+    height: 150px;
+  }
+  #process .processBoxWarrp .processBox .boxText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.7rem;
+    padding: 12px;
+  }
+  #search {
+    padding: 60px 20px;
+  }
+  #search .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #search .titleWrapp .miniTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  #search .titleWrapp .mainTitle {
+    font-size: 1.4rem;
+  }
+  #search .searchBoxWarrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+    gap: 20px;
+  }
+  #search .searchBoxWarrp .searchBox {
+    width: 297px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 12px;
+    background: #171717;
+    padding: 24px 18px;
+    transition: all 0.5s;
+  }
+  #search .searchBoxWarrp .searchBox:hover {
+    transform: translateY(-10px);
+  }
+  #search .searchBoxWarrp .searchBox .searchBoxTitle {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  #search .searchBoxWarrp .searchBox .searchBoxImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #searchTwo {
+    padding: 60px 20px;
+  }
+  #searchTwo .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #searchTwo .titleWrapp .miniTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  #searchTwo .titleWrapp .mainTitle {
+    font-size: 1.4rem;
+  }
+  #searchTwo .searchBoxWarrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+    gap: 20px;
+  }
+  #searchTwo .searchBoxWarrp .searchBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 12px;
+    background: #171717;
+    padding: 24px 18px;
+    transition: all 0.5s;
+  }
+  #searchTwo .searchBoxWarrp .searchBox:hover {
+    transform: translateY(-10px);
+  }
+  #searchTwo .searchBoxWarrp .searchBox .searchBoxTitle {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  #searchTwo .searchBoxWarrp .searchBox .searchBoxImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #tobe {
+    padding: 60px 20px;
+    background: #000;
+  }
+  #tobe .titleWrapp {
+    display: flex;
+    gap: 12px;
+  }
+  #tobe .titleWrapp .miniTitle {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #tobe .titleWrapp .mainTitle {
+    width: 100%;
+    font-size: 2.6rem;
+    color: #f79b33;
+  }
+  #tobe .tobeAllwrapp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px 0;
+  }
+  #tobe .tobeAllwrapp .tobetextArea {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+  #tobe .tobeAllwrapp .tobetextArea .tobeTItle {
+    font-size: 1.1rem;
+    color: #fff;
+    width: 100%;
+  }
+  #tobe .tobeAllwrapp .tobetextArea .tobedesc {
+    display: flex;
+    padding-top: 50px;
+    gap: 60px;
+  }
+  #tobe .tobeAllwrapp .tobetextArea .tobedesc .tobeContent {
+    display: flex;
+    gap: 12px;
+  }
+  #tobe .tobeAllwrapp .tobetextArea .tobedesc .tobeContent .tobetext {
+    color: #ccc;
+  }
+  #tobe .tobeImgArea {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  #tobe .tobeImgArea img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #prime {
+    padding: 60px 20px;
+    background: #000;
+  }
+  #prime .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #prime .titleWrapp .miniTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #prime .titleWrapp .mainTitle {
+    font-size: 2.6rem;
+    color: #00a8e1;
+  }
+  #prime .tobeAllwrapp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px 0;
+  }
+  #prime .tobeAllwrapp .tobetextArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #prime .tobeAllwrapp .tobetextArea .tobeTItle {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  #prime .tobeAllwrapp .tobetextArea .tobedesc {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 60px;
+  }
+  #prime .tobeAllwrapp .tobetextArea .tobedesc .tobeContent {
+    display: flex;
+    gap: 12px;
+  }
+  #prime .tobeAllwrapp .tobetextArea .tobedesc .tobeContent .tobetext {
+    color: #ccc;
+  }
+  #prime .tobeImgArea {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding-top: 40px;
+  }
+  #prime .tobeImgArea img {
+    width: 100%;
+    height: auto;
+  }
+  #appFlow {
+    padding: 60px 20px;
+    background: #000;
+  }
+  #appFlow .titleWrapp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #appFlow .titleWrapp .miniTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #appFlow .appFlowImg {
+    width: 100%;
+    padding: 60px 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #appFlow .appFlowImg img {
+    width: 100%;
+  }
+  #wf {
+    padding: 60px 20px;
+    background: #171717;
+  }
+  #wf .titleWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #wf .titleWrapp .miniTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #wf .wfImgArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #wf .wfImgArea div {
+    width: 100%;
+    color: #666;
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  #wf .wfImgArea img {
+    width: 100%;
+  }
+  #mobile {
+    width: 100%;
+    padding: 60px 0;
+    background: #f1f1f1;
+  }
+  #mobile .MHeader {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 50px 40px;
+  }
+  #mobile .loginWrapp {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  #mobile .loginWrapp .leftArea {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+  }
+  #mobile .loginWrapp .leftDetail {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s;
+  }
+  #mobile .loginWrapp .rightArea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 20px;
+  }
+  #mobile .loginWrapp .rightCart {
+    display: flex;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s;
+    padding-left: 40px;
+  }
+  #mobile .loginWrapp .fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  #mobile .loginWrapp .fade-inL {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #mobile .MmainWrapp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+  }
+  #mobile .MmainWrapp .rightArea {
+    width: 100%;
+    display: flex;
+  }
+  #mobile .MmainWrapp .fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  #mobile .MmainWrapp .fade-inL {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #mobile .MdetailWrapp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+  }
+  #mobile .MdetailWrapp .rightArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mobile .MdetailWrapp .fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  #mobile .MdetailWrapp .fade-inL {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #mobile .cartWrapp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 100px 0;
+  }
+  #mobile .cartWrapp .leftArea {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+  }
+  #mobile .cartWrapp .rightArea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 12%;
+  }
+  #mobile .cartWrapp .leftMcart {
+    display: flex;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s;
+    padding-left: 40px;
+  }
+  #mobile .cartWrapp .fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  #mobile .cartWrapp .fade-inL {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #mobile .primeWrapp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 100px 0;
+  }
+  #mobile .primeWrapp .leftArea {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 12%;
+  }
+  #mobile .primeWrapp .leftDetail {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s;
+  }
+  #mobile .primeWrapp .rightArea {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  #mobile .primeWrapp .rightprime {
+    display: flex;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s;
+    padding-left: 40px;
+  }
+  #mobile .primeWrapp .fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  #mobile .primeWrapp .fade-inL {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #mobile img {
+    width: 100%;
+  }
 }
