@@ -1,0 +1,72 @@
+@import url(./threadsreset.css);
+.pageTitle {
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+#innerWrapp {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+}
+
+#intro .introImg {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+#bg {
+  width: 100%;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+#bg .bgcontentsWrapp {
+  padding: 80px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+#bg .bgdescWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#bg .bgdescWrapp .bgTitle {
+  font-size: 1.1rem;
+}
+#bg .bgdescWrapp .bgdescinfo {
+  font-size: 0.8rem;
+  color: #232323;
+}
+#bg .bgprocessWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#bg .bgprocessWrapp .bgTitle {
+  font-size: 1.1rem;
+}
+#bg .bgprocessWrapp .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+#bg .toolWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#bg .toolWrapp .bgTitle {
+  font-size: 1.1rem;
+}
+#bg .toolWrapp .tools {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+}
