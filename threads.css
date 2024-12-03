@@ -5,6 +5,33 @@
   padding-top: 20px;
 }
 
+#backBtn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: #181817;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+#backBtn span {
+  scale: 1.1;
+  color: #ccc;
+  transform: translateX(0px);
+  transition: all 0.3s;
+}
+#backBtn:hover {
+  background: #f6f6f6;
+}
+#backBtn:hover span {
+  color: #000000;
+  transform: translateX(-8px);
+}
+
 #innerWrapp {
   width: 1024px;
   display: flex;
@@ -310,4 +337,297 @@
 }
 #asistobe .solutionBOx .solutions .solution {
   font-size: 1rem;
+}
+
+#ia {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+#styleguide {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+#styleguide .topwrapp {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#styleguide .logowrapp {
+  width: 50%;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 16px;
+}
+#styleguide .logowrapp .logoArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#styleguide .colorWrapp {
+  width: 50%;
+  background: #fafafa;
+  border-radius: 16px;
+}
+#styleguide .colorWrapp .colorTitle {
+  padding: 20px 20px 6px;
+}
+#styleguide .colorWrapp .colors .color {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+#styleguide .colorWrapp .colors .color .code {
+  color: #9f9f9f;
+  font-size: 0.7rem;
+}
+#styleguide .colorWrapp .colors .color .rgb {
+  color: #9f9f9f;
+  font-size: 0.7rem;
+}
+#styleguide .colorWrapp .colors .color:nth-child(1) {
+  background: #fafafa;
+}
+#styleguide .colorWrapp .colors .color:nth-child(2) {
+  background: #f3f5f7;
+}
+#styleguide .colorWrapp .colors .color:nth-child(3) {
+  background: #e9e9e9;
+}
+#styleguide .colorWrapp .colors .color:nth-child(4) {
+  background: #d2d3d3;
+}
+#styleguide .colorWrapp .colors .color:nth-child(5) {
+  background: #bababa;
+}
+#styleguide .colorWrapp .colors .color:nth-child(6) {
+  background: #4d4d4d;
+}
+#styleguide .colorWrapp .colors .color:nth-child(7) {
+  background: #181818;
+}
+#styleguide .colorWrapp .colors .color:nth-child(8) {
+  background: #000000;
+  border-radius: 0 0 16px 16px;
+}
+#styleguide .typoWrapp {
+  width: 100%;
+  background: #fafafa;
+  border-radius: 16px;
+}
+#styleguide .typoWrapp .typoTitle {
+  padding: 20px 20px 0;
+}
+#styleguide .typoWrapp .extxtWrapp {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+#styleguide .typoWrapp .extxtWrapp .extxt {
+  font-size: 0.7rem;
+  color: #b5b5b5;
+  letter-spacing: 3px;
+}
+#styleguide .typoWrapp .extxtWrapp .extxtko {
+  font-size: 0.7rem;
+  color: #b5b5b5;
+  letter-spacing: 0.6px;
+}
+#styleguide .typoWrapp .fontWrapp {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+#styleguide .typoWrapp .fontWrapp .leftfont {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#styleguide .typoWrapp .fontWrapp .leftfont .bigfont {
+  font-size: 5rem;
+  font-weight: 500;
+}
+#styleguide .typoWrapp .fontWrapp .leftfont .subfont {
+  font-size: 3rem;
+  color: #ccc;
+  font-weight: 500;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 50px;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont div {
+  font-size: 2.4rem;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont div:nth-child(1) {
+  font-weight: bold;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont div:nth-child(2) {
+  font-weight: 500;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont div:nth-child(3) {
+  font-weight: 400;
+}
+#styleguide .typoWrapp .fontWrapp .rightfont div:nth-child(4) {
+  font-weight: 300;
+  color: #bbbbbb;
+}
+
+#bill {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#bill img {
+  width: 100%;
+}
+
+#wf {
+  padding: 40px 0;
+  width: 100%;
+}
+#wf img {
+  width: 100%;
+}
+
+#ui {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+#ui .textWrapp {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#ui .textWrapp .maintxt {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: normal;
+}
+#ui .textWrapp .subtxt {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #8f8f8f;
+}
+#ui .onbording {
+  padding: 100px 0;
+}
+#ui .onbording .onbordingImg {
+  padding: 40px 0;
+}
+#ui .onbording img {
+  width: 100%;
+}
+#ui .newfunction .functionWrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40px;
+}
+#ui .mainImg {
+  padding: 100px 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+#ui .Modifying {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#ui .Modifying .modiwrapp {
+  display: flex;
+}
+#ui .Modifying .modiwrapp .modidesc {
+  width: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#ui .activity {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#ui .myPage {
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#ui .pin {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+#ui .pin .pinContents {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#ui .pin .pinContents div {
+  color: #4d4d4d;
+}
+#ui .pin .pinContents img {
+  width: 60%;
+  height: 60%;
+}
+#ui .dark {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#ui .dark .darkContents {
+  display: flex;
+}
+#ui .dark .darkDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#ui .dark .darkDesc .darkImg {
+  padding-left: 30px;
+}
+
+#footer {
+  width: 100%;
+  padding: 160px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#footer .footerInfo {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #000;
 }
